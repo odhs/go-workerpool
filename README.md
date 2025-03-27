@@ -116,6 +116,8 @@ wg.Wait()
 fmt.Println("Todas as goroutines foram concluídas.")
 ```
 
+---
+
 ### _Mutex_
 
 O _Mutex_ _(Mutual Exclusion_) é uma estrutura usada para evitar condições de corrida ao acessar recursos compartilhados em um ambiente concorrente. Ele garante que apenas uma _goroutine_ possa acessar um recurso crítico por vez.
@@ -142,6 +144,8 @@ func incrementar() {
     contador++
 }
 ```
+
+---
 
 ### _Context_
 
@@ -197,6 +201,8 @@ func main() {
 }
 ```
 
+---
+
 ## Estrutura do Código
 
 ### Pacote _workerpoll_
@@ -217,6 +223,8 @@ type ProcessFunc func(ctx context.Context, job Job) Result
   - `Start(ctx context.Context, inputCh <-chan Job) (<-chan Result, error)`: Inicia o pool de workers.
   - `Stop() error`: Para o pool de workers.
   - `IsRunning() bool`: Verifica se o pool está em execução.
+
+---
 
 ## Referências dos Conceitos
 
